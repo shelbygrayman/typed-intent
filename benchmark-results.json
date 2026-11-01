@@ -1,6 +1,6 @@
 {
   "schema": "typed-intent.benchmark.v1",
-  "createdAt": "2026-11-01T18:35:19.142Z",
+  "createdAt": "2026-11-01T18:40:11.427Z",
   "node": "v24.22.1",
   "platform": "linux-x64",
   "cpu": "AMD EPYC 9V74 80-Core Processor",
@@ -8,12 +8,12 @@
   "fixtureSha256": "64e50d579bacd8018a1814092fea84c06aa254c156f047c543c38ded0ebe341e",
   "libraryVersions": {
     "ethers": "6.17.0",
-    "viem": "2.38.6"
+    "viem": "2.57.14"
   },
   "cases": 1000,
   "matchingDigests": 1000,
   "warmup": 100,
-  "medianMs": 0.38643200000001343,
-  "p95Ms": 0.7284359999999879,
+  "medianMs": 0.3883849999999711,
+  "p95Ms": 0.6576690000000553,
   "scope": "1000 generated ERC-2612-shaped fixtures; exact digest comparison with viem. Timings measure inspector only, not viem, UI, network or real signing. Synthetic data; same schema with systematically varied values. Not an audit or general correctness claim."
 }
