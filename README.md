@@ -24,6 +24,10 @@ Input is a JSON object with exactly `types`, `primaryType`, `domain` and `messag
 - Tests compare nested structs, arrays and an ERC-2612-shaped request with [viem](https://viem.sh/), an independently implemented typed-data encoder. Ethers is the runtime encoder; viem is a development-only comparison dependency.
 - The [recorded benchmark](benchmark-results.json) checked 1,000 synthetic variations of one Permit schema against viem: 1,000 digests matched. It records warm timing and hardware. This is not broad protocol coverage or a security audit.
 
+## Broader conformance evidence
+
+The [conformance protocol](CONFORMANCE.md) defines a separate fixed corpus across ten EIP-712 data families, independent viem digest comparisons, invalid-input rejection and metamorphic checks. Run `npm run conformance`; every result and the complete synthetic inputs are retained in `conformance-ci.json`. CI retains both benchmark reports as downloadable artifacts, including reports from failing correctness checks. See [the measured results](CONFORMANCE-RESULTS.md) for the first run and remaining gaps.
+
 ## Boundaries
 
 This is an early developer tool, **not a transaction simulator, phishing detector, contract verifier, signature verifier or safety verdict**. A domain is a claim provided in the input: the tool does not prove the contract or chain is authentic. Unknown message types are left unclassified. An ERC-2612-shaped struct may be used by a nonstandard or malicious contract; the shape does not establish behavior. The permit deadline controls submission of a signature and does not necessarily expire the allowance it creates. Token amounts are raw integers; the tool does not guess token decimals or prices.
