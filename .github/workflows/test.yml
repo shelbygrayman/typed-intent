@@ -15,3 +15,12 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run benchmark
+      - run: npm run conformance
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: benchmark-evidence
+          path: |
+            benchmark-ci.json
+            conformance-ci.json
+          if-no-files-found: error
