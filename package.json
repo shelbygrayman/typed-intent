@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "description": "Offline inspection of EIP-712 typed data with reproducible digest checks",
   "scripts": {
-    "test": "node --test inspect.test.mjs",
-    "benchmark": "node benchmark.mjs benchmark-ci.json"
+    "test": "node --test inspect.test.mjs conformance.test.mjs",
+    "benchmark": "node benchmark.mjs benchmark-ci.json",
+    "conformance": "node conformance.mjs conformance-ci.json"
   },
   "keywords": [],
   "license": "MIT",
